@@ -1,0 +1,72 @@
+.left-menu {
+
+  .close-menu {
+    display: none;
+
+    @media screen and (max-width: 992px) {
+      display: block;
+      position: absolute;
+      right: 0;
+      z-index: 15;
+    }
+  }
+
+  &_inner{
+    width: 350px;
+    max-width: 100%;
+    background: $light;
+
+    &.open {
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+      right: 0;
+      transition: right .2s linear;
+    }
+
+    @media screen and (max-width: 992px) {
+      position: fixed;
+      top: 0;
+      right: -350px;
+      bottom: 0;
+      z-index: 10;
+      transition: right .2s linear;
+    }
+  }
+
+  nav {
+    position: relative;
+    padding: 30px 25px;
+
+    @media screen and (max-width: 992px) {
+      top: 45px;
+    }
+
+    a {
+      display: block;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 25px;
+      color: $black;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+  }
+
+  .menu-toggle {
+    display: none;
+
+    @media screen and (max-width: 992px) {
+      display: flex;
+      position: absolute;
+      top: -47px;
+      right: 0;
+    }
+
+    > span {
+      background: $white;
+    }
+  }
+
+}

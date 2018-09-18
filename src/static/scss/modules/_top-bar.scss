@@ -1,0 +1,97 @@
+.top-bar {
+  background: $white;
+  width: 100%;
+  font-size: 14px;
+
+  &_inner {
+    height: 42px;
+    position: relative;
+
+    @media screen and (max-width: 769px) {
+      height: 62px;
+    }
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .contacts {
+    a {
+      font-size: 13px;
+      color: rgba(31, 20, 38, 0.95);
+      padding-right: 45px;
+
+      @media screen and (max-width: 768px) {
+        display: block;
+      }
+
+      &.mail {
+        @media screen and (max-width: 768px) {
+          margin-bottom: 5px;
+        }
+      }
+
+      &:before {
+        content: '';
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: -2px;
+        background: url(../img/mail.png) 0 0 no-repeat;
+        background-size: cover;
+      }
+      &.mail:before {
+        width: 16px;
+        height: 16px;
+      }
+      &.phone:before {
+        width: 9px;
+        height: 18px;
+        background: url(../img/mobile.png) 0 0 no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  nav {
+    display: block;
+
+    @media screen and (max-width: 1200px) {
+      position: absolute;
+      right: 0;
+      top: 100%;
+      z-index: 10;
+      margin-top: 1px;
+      background: $white;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+      display: none;
+
+      &.open {
+        display: block;
+      }
+    }
+
+    a {
+      font-size: 14px;
+      color: rgba(31, 20, 38, 0.5);
+      padding-left: 30px;
+      display: inline-block;
+
+      @media screen and (max-width: 1200px) {
+        display: block;
+        padding-right: 30px;
+        margin: 20px 0;
+      }
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+
+    @media screen and (max-width: 1200px) {
+      display: flex;
+    }
+  }
+
+}

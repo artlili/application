@@ -1,0 +1,33 @@
+.top-menu {
+  width: 100%;
+  background: $primary;
+
+  &_inner {
+    height: 74px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 992px) {
+
+      align-items: center;
+    }
+
+    .logo {
+      max-width: 350px;
+      width: 100%;
+      padding-top: 17px;
+      padding-bottom: 15px;
+      border-right: 1px solid $white;
+
+      @media screen and (max-width: 992px) {
+        // border-right: 0;
+        padding-right: 25px;
+        margin-right: 55px;
+      }
+
+      > img {
+        max-width: 304px;
+      }
+    }
+  }
+}

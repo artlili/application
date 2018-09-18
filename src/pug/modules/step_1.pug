@@ -1,0 +1,74 @@
+#step_1.js-step.active(data-step='1')
+  +select(
+    'Рубрика журнала', 
+    '',
+    'Нажмите для выбора', 
+    'journalCategory', 
+    'text', 
+    false, 
+    'Первый вариант', 
+    'Второй вариант', 
+    'Третий вариант'
+  )
+  
+  +input(
+    'Название статьи', 
+    '',
+    'Название статьи', 
+    'articleName', 
+    'text'
+  )
+  .js-input
+    +input(
+      'Контактное лицо',
+      '', 
+      'ФИО', 
+      'contactName', 
+      'text'
+    )
+  +input(
+    'Контактный e-mail', 
+    '',
+    'E-mail', 
+    'contactMail', 
+    'text'
+  )
+  
+  p.authors Авторы статьи
+  .js-form-authors
+    div.js-input-auto
+      +inputAuto(
+        'articleAuthor', 
+        'text',
+        'ФИО автора статьи'
+      )
+
+  .add-author.js-add-input Добавить автора
+  
+  .checkbox
+    label Я согласен(-на) с условиями  
+      <a class="link" href="">Публичной Оферты </a>
+      | и даю свое 
+      <a class="link" href="">Согласие на обработку персональных данных </a>  
+      +checkbox(
+        'personalData',
+        'checkbox'
+      )
+  
+  .checkbox
+    label Я согласен(-на) получать рассылку о мероприятиях и акциях издательства
+      +checkbox(
+        'sendNews',
+        'checkbox',
+        'checked'
+      )
+  
+  .clearfix
+    .form-btn 
+      +button(
+        'button',
+        'Далее',
+        'disabled next',
+        '2'
+      )
+      span.btn-desc Для продолжения необходимо заполнить все поля

@@ -1,0 +1,8 @@
+#step_1 {
+  display: none;
+  display: none !important;
+
+  &.active {
+    display: block;
+  }
+}

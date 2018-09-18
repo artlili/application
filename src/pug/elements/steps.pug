@@ -1,0 +1,7 @@
+mixin steps(...text)
+  .steps
+    
+    each val, index in text
+      .step.js-step(data-step= (index + 1))
+       span= index + 1
+       p.font_sb= val

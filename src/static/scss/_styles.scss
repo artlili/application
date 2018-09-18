@@ -1,0 +1,120 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background: $white;
+  color: $black;
+  font-family: 'Proxima Nova R';
+  font-size: 14px;
+  margin-bottom: 60px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.font{
+  &_sb {
+    font-family: 'Proxima Nova SB';
+  }
+  &_b {
+    font-family: 'Proxima Nova B';
+  }
+  &_bi {
+    font-family: 'Proxima Nova BI';
+  }
+}
+
+h2 {
+  font-size: 21px;
+  font-family: 'Proxima Nova B';
+}
+
+
+/*-- Toggle Menu --*/
+
+.menu-toggle {
+  width: 40px;
+  height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: $primary;
+    margin-top: 2px;
+  }
+}
+
+/*-- Close Menu --*/
+.close-menu {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+
+  span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: $primary;
+    margin-bottom: 5px;
+    transform: rotate(45deg);
+    margin-top: 10px;
+
+    &:first-child {
+      transform: rotate(-45deg);
+      position: relative;
+      left: 0;
+      top: 12px;
+    }
+  }
+}
+
+/*-- Arrows --*/
+i {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+/*-- Block title --*/
+.title {
+  font-size: 18px;
+  color: rgba(31, 20, 38, 0.87);
+  margin-bottom: 25px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: rgba(31, 20, 38, 0.87);
+  margin-bottom: 5px;
+}

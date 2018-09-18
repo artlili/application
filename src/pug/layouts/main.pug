@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+  include head
+  
+      
+  body
+    include ../modules/top-bar
+    include ../modules/top-menu
+    
+    .container
+      .main
+        include ../modules/left-menu
+        block content
+
+    include ../modules/footer
+    
+    include scripts
+      

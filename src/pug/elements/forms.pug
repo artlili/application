@@ -1,0 +1,78 @@
+//- Input
+mixin input( label, span, placeholder, id, type, disabled)
+  .form-input
+    label(for= id)= label
+      span= span
+      input.input.required(
+        id= id
+        type= type
+        placeholder= placeholder
+        disabled= disabled
+        )
+
+//- Input auto
+mixin inputAuto(id, type, placeholder)
+  .form-input
+    input.input.input_auto.required(
+      id= id
+      type= type
+      placeholder= placeholder
+      disabled= disabled
+      )
+    span.clear.js-clear Очистить
+
+//- Select
+mixin select(label, span, placeholder, id, type, disabled, ...options)
+  .form-input
+    label(for= id)= label
+      span= span
+      .select.js-select
+        input.input(
+          readonly
+          id= id
+          type= type
+          placeholder= placeholder
+          disabled= disabled
+          )
+        .select_option
+          ul
+            each option in options
+              li(data-value= option)= option
+          select(name= id)
+            option(selected value = "") text  
+
+//- Checkbox without label
+mixin checkbox(id, type, checked)
+  input.input(
+    id= id
+    type= type
+    name= id
+    checked= checked
+    )
+  span.checkbox-type
+    
+//- Radio-button without label
+mixin radio(id, type, name, checked)
+  input.input(
+    id= id
+    type= type
+    name= name
+    checked= checked
+    )
+  span.radio-btn-type
+//- Textarea
+mixin textarea(label, id, placeholder )
+  .form-input
+    label(for= id)= label
+      textarea.textarea(
+        id= id
+        name= id
+        placeholder= placeholder
+        )
+//- Button
+mixin button(type, text, className, step)
+  button(
+    type= type
+    class= className
+    data-step= step
+    )= text

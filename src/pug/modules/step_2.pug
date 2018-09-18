@@ -1,0 +1,101 @@
+#step_2.js-step(data-step='2')
+  .form-input_half
+    +select(
+      'Количество страниц в статье', 
+      '170 руб./стр.',
+      '5', 
+      'printPages', 
+      'text', 
+      false, 
+      '10', 
+      '15'
+    )
+    
+    +select(
+      'Количество печатных журналов', 
+      '350 руб./экз.',
+      '2', 
+      'printJournal', 
+      'text', 
+      false, 
+      '3', 
+      '4'
+    )
+    
+    +select(
+      'Количество печатных оттисков', 
+      '170 руб./экз.',
+      '0', 
+      'printImpres', 
+      'text', 
+      false, 
+      '1', 
+      '2'
+    )
+  .color_bg
+    p.title Параметры доставки
+    p.subtitle Страна доставки
+    .radio-btn
+      label Россия
+        span (Бесплатно)
+        +radio(
+          'shipping_1',
+          'radio',
+          'shipping',
+          'checked'
+        )
+    .radio-btn
+      label СНГ 
+        span (300 руб.)
+        +radio(
+          'shipping_2',
+          'radio',
+          'shipping'
+        )
+    .radio-btn
+      label Страны дальнего зарубежья
+        span (500 руб.)
+        +radio(
+          'shipping_3',
+          'radio',
+          'shipping'
+        )
+    .js-input    
+      +input(
+        'ФИО получателя', 
+        '',        
+        'ФИО', 
+        'receiverName', 
+        'text'
+      )
+    +input(
+      'Почтовый адрес',
+      '', 
+      'Введите адрес доставки', 
+      'receiverAddress', 
+      'text'
+    )
+    span.input-desc Индекс, страна, область, населенный пункт, улица, дом, квартира
+  .form-input_half
+    +input(
+      'Перевод текста на английский язык',
+      '0,36 руб./симв.', 
+      'Введите количество символов', 
+      'receiverIndex', 
+      'text'
+    )
+  .form-input_full
+    +textarea(
+      'Комментарий к заявке',
+      'orderComment',
+      'Ваш комментарий'
+    )
+  .clearfix
+    .form-btn 
+      +button(
+        'button',
+        'Далее',
+        'disabled next',
+        '3'
+      )
+      span.btn-desc Для продолжения необходимо заполнить все поля
