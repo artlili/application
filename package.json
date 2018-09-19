@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "artlili",
-  "license": "ISC",
+  "license": "GPL",
   "devDependencies": {
     "animate-sass": "^0.8.2",
     "browser-sync": "^2.24.5",
