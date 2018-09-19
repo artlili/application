@@ -1,12 +1,12 @@
 {
-  "name": "starter",
+  "name": "application",
   "version": "1.0.0",
-  "description": "starter template",
+  "description": "application template",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "artlili",
+  "author": "Lili Agazadyan",
   "license": "GPL",
   "devDependencies": {
     "animate-sass": "^0.8.2",
